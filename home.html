@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+<!-- style for the infinity scrolling-->
+<style>
+    @keyframes slide-left {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+    }
+
+    @keyframes slide-right {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(0); }
+    }
+
+    .animate-slide-left {
+        display: flex;
+        animation: slide-left 10s linear infinite;
+    }
+
+    .animate-slide-right {
+        display: flex;
+        animation: slide-right 10s linear infinite;
+    }
+</style>
+
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="absolute top-0 left-0 w-full flex justify-between items-center px-8 py-6 bg-transparent z-20">
+       <!-- Logo -->
+       <a href="#" class="flex items-center">
+        <img src="imgs/Vector.png" alt="Logo" class="h-12 w-auto"> <p class="text-white font-bold text-2xl ">NATURE GREEN NURSERY TCI</p>
+    </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-6 text-white font-bold">
+            <a href="#" class="hover:text-gray-300">Home</a>
+            <a href="#" class="hover:text-gray-300">landscaping</a>
+            <a href="#" class="hover:text-gray-300">plants</a>
+            <a href="#" class="hover:text-gray-300">Contact</a>
+        </nav>
+        
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+    </header>
+
+    <!-- Sidebar Navigation (Fixed Right Side) -->
+    <div id="sidebar" class="fixed top-0 right-0 w-64 h-full bg-gray-900 text-white transform translate-x-full transition-transform duration-300 ease-in-out z-50 shadow-lg">
+        <div class="flex justify-between items-center p-6">
+            <span class="text-2xl font-bold">Menu</span>
+            <button id="close-btn" class="text-white focus:outline-none">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col space-y-4 px-6">
+            <a href="#" class="hover:text-gray-300">Home</a>
+            <a href="#" class="hover:text-gray-300">Plants</a>
+            <a href="#" class="hover:text-gray-300">Services</a>
+            <a href="#" class="hover:text-gray-300">Contact</a>
+        </nav>
+    </div>
+
+    
+    <!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center text-center text-white bg-cover bg-center" style="background-image: url('imgs/hero\ image.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 max-w-3xl px-4">
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight">Discover the Beauty of Nature</h1>
+        <p class="mt-4 text-lg md:text-xl">Explore our selection of plants and landscaping services to create your perfect garden.</p>
+        <div class="mt-6 flex flex-col md:flex-row justify-center gap-4">
+            <a href="#" class="px-6 py-3 bg-green-500 rounded-lg hover:bg-green-600">Explore Our Plants</a>
+            <a href="#" class="px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-black">Learn About Our landscaping Services</a>
+        </div>
+    </div>
+
+
+    <p class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-xl md:text-2xl lg:text-3xl xl:text-4xl underline text-center">GRAND TURK, TURK AND CAICOS ISLAND BWI</p>
+
+
+</section>
+
+<section class="bg-cream py-16 px-8">
+    <h2 class="text-green-700 text-3xl md:text-4xl font-bold text-center mb-4">Featured Plants</h2>
+    <div class="w-full flex justify-center mb-6">
+        <div class="w-24 h-1 bg-green-700"></div>
+    </div>
+
+    <div class="relative overflow-hidden w-full space-y-6">
+        <!-- First slider (left direction) -->
+        <div class="relative overflow-hidden w-full">
+            <div class="flex space-x-4 animate-slide-left" id="slider-left">
+                <img src="imgs/plant 1.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
+                <img src="imgs/plant 2.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
+                <img src="imgs/plant 3.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
+                <img src="imgs/plant 4.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
+                <img src="imgs/plant 5.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
+            </div>
+        </div>
+
+        <!-- Second slider (right direction) -->
+        <div class="relative overflow-hidden w-full">
+            <div class="flex space-x-4 animate-slide-right" id="slider-right">
+                <img src="imgs/plant 6.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
+                <img src="imgs/plant 7.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
+                <img src="imgs/plant 8.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
+                <img src="imgs/plant 9.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
+                <img src="imgs/plant 10.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
+            </div>
+        </div>
+    </div>
+
+    <!-- See More Button -->
+    <div class="flex justify-center mt-6">
+        <button id="seeMoreBtn" class="px-6 py-3 bg-green-700 text-white rounded-lg hover:bg-green-800">See More</button>
+    </div>
+</section>
+
+<!-- MODAL (Gallery) -->
+<div id="galleryModal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex justify-center items-center hidden">
+    <button id="closeModal" class="absolute top-5 right-5 text-white text-2xl">&times;</button>
+    <button id="prevBtn" class="absolute left-5 text-white text-3xl">&lt;</button>
+    <img id="galleryImage" class="w-[500px] h-[500px] object-cover rounded-lg shadow-lg">
+    <button id="nextBtn" class="absolute right-5 text-white text-3xl">&gt;</button>
+</div>
+
+<section class="bg-cream py-16 px-8">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-green-700 py-2 text-5xl md:text-5xl font-bold">Landscaping And Garden Maintenance Services</h2>
+        <div class="w-24 h-1 bg-green-700 mt-2 mb-4"></div>
+        <p class="text-gray-700 text-lg">
+            Transform your outdoor space with our expert landscaping services. 
+            From lush gardens to elegant pathways, we bring your vision to life 
+            with sustainable and aesthetic designs tailored to your environment.
+        </p>
+    </div>
+</section>
+
+
+    
+
+
+    
+    <script src="home.js"></script>
+</body>
+</html>
