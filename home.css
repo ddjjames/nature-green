@@ -1,0 +1,139 @@
+.body{
+    background-color: #FBEEDC;
+}
+
+.logoc{
+    color:rgb(255, 255, 255);
+}
+
+
+
+.line{
+    background-color: #031602;
+}
+
+
+.button{
+    background-color: #031602;
+    color: #c3c4c4;
+}
+
+.button:hover{
+    background-color: #c3c4c4;
+    color:#031602 ;
+}
+
+
+
+.button1{
+    background-color:#c3c4c4;
+    color: #031602;
+}
+
+.button1:hover{
+    background-color: #031602;
+    color: #c3c4c4;
+}
+
+.headtext{
+    color: #86AF58;
+}
+
+
+
+
+
+
+
+/* Image Fade Animation  for plants page*/ 
+.slideshow img {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.slideshow img.active {
+    opacity: 1;
+    
+}
+
+
+
+
+
+/* style for the infinity scrolling*/
+
+@keyframes slide-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes slide-right {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+.animate-slide-left {
+    display: flex;
+    animation: slide-left 10s linear infinite;
+}
+
+.animate-slide-right {
+    display: flex;
+    animation: slide-right 10s linear infinite;
+}
+
+
+
+
+
+
+
+
+
+/* style for the plant section img sliding*/
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem
+}
+.img {
+    width: 2rem;
+    height: 28rem;
+    transition: all 0.9s ease-in-out;
+    cursor: pointer;
+}
+.expanded {
+    width: 30rem;
+}
+.collapsed {
+    width: 4rem;
+}
+
+@media (max-width: 768px) {
+    .flex {
+       
+        align-items: center; /* Center everything */
+        text-align: center; /* Center text */
+    }
+
+    .image-container {
+        flex-direction: row; /* Keep images side by side */
+        justify-content: center; /* Center images */
+        gap: 0.8rem; /* Slightly more space between images */
+        flex-wrap: nowrap; /* Ensure they stay in one row */
+    }
+
+    .img {
+        width: 8rem; /* Increase size for better visibility */
+        height: 20rem; /* Keep height proportional */
+    }
+
+    .expanded {
+        width: 14rem; /* Bigger expanded size */
+    }
+
+    .collapsed {
+        width: 5rem; /* Keep collapsed effect reasonable */
+    }
+}

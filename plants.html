@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NATURE GREEN NURSERY TCI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="home.css">
+
+</head>
+
+<body class="bg-gray-100">
+    
+
+     <!-- Header -->
+     <header class="absolute top-0 left-0 w-full flex justify-between items-center px-8 py-6 bg-transparent z-20">
+        <!-- Logo -->
+        <a href="#" class="flex items-center">
+         <img src="imgs/Vector.png" alt="Logo" class="h-12 w-auto"> <p class="logoc font-bold text-2xl ">NATURE GREEN NURSERY TCI</p>
+     </a>
+ 
+         <!-- Desktop Navigation -->
+         <nav class="hidden md:flex space-x-6 text-white font-bold">
+             <a href="home.html" class="hover:text-gray-300">Home</a>
+             <a href="#" class="hover:text-gray-300">Landscaping</a>
+             <a href="#" class="hover:text-gray-300">Plants</a>
+             <a href="#" class="hover:text-gray-300">Contact</a>
+         </nav>
+         
+ 
+         <!-- Mobile Menu Button -->
+         <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+             <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+             </svg>
+         </button>
+     </header>
+ 
+     <!-- Sidebar Navigation (Fixed Right Side) -->
+     <div id="sidebar" class="fixed top-0 right-0 w-64 h-full bg-gray-900 text-white transform translate-x-full transition-transform duration-300 ease-in-out z-50 shadow-lg">
+         <div class="flex justify-between items-center p-6">
+             <span class="text-2xl font-bold">Menu</span>
+             <button id="close-btn" class="text-white focus:outline-none">
+                 <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                 </svg>
+             </button>
+         </div>
+         <nav class="flex flex-col space-y-4 px-6">
+             <a href="home.html" class="hover:text-gray-300">Home</a>
+             <a href="#" class="hover:text-gray-300">Plants</a>
+             <a href="#" class="hover:text-gray-300">Services</a>
+             <a href="#" class="hover:text-gray-300">Contact</a>
+         </nav>
+     </div>
+
+
+   <!-- Hero Section -->
+<section class="relative h-[50vh] w-full flex items-center justify-center text-center text-white bg-cover bg-center" style="background-image: url('imgs/plant\ page.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 max-w-3xl px-4">
+        <h1 class="text-2xl md:text-4xl font-medium leading-tight">Plants</h1>
+    </div>
+</section>
+
+
+<section class="container mx-auto p-6 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+    <!-- Left Side: Text Content -->
+    <div class="md:w-1/2 text-black">
+        <h2 class="text-green-700 text-2xl md:text-3xl italic font-semibold">Bedding Plants</h2>
+        <p class="mt-2 text-lg font-medium">We offer a plethora of maintenance services</p>
+        <p class="mt-4 text-gray-700">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </div>
+
+    <!-- Divider Line -->
+    <div class="hidden md:block w-[4px] bg-black h-full"></div>
+
+    <!-- Right Side: Image Slideshow -->
+    <div class="relative md:w-1/2 h-[300px] w-full overflow-hidden">
+        <div class="slideshow w-full h-full relative">
+            <img src="imgs/plant 1.jpg" class="w-full h-full object-cover active">
+            <img src="imgs/plant 3.jpg" class="w-full h-full object-cover">
+            <img src="imgs/plant 5.jpg" class="w-full h-full object-cover">
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<script src="home.js"></script>
+ 
+</body>
+</html>
+

@@ -3,48 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>NATURE GREEN NURSERY TCI</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="home.css">
+
 </head>
 
 
-<!-- style for the infinity scrolling-->
-<style>
-    @keyframes slide-left {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-100%); }
-    }
-
-    @keyframes slide-right {
-        0% { transform: translateX(-100%); }
-        100% { transform: translateX(0); }
-    }
-
-    .animate-slide-left {
-        display: flex;
-        animation: slide-left 10s linear infinite;
-    }
-
-    .animate-slide-right {
-        display: flex;
-        animation: slide-right 10s linear infinite;
-    }
-</style>
 
 <body class="bg-gray-100">
     <!-- Header -->
     <header class="absolute top-0 left-0 w-full flex justify-between items-center px-8 py-6 bg-transparent z-20">
        <!-- Logo -->
        <a href="#" class="flex items-center">
-        <img src="imgs/Vector.png" alt="Logo" class="h-12 w-auto"> <p class="text-white font-bold text-2xl ">NATURE GREEN NURSERY TCI</p>
+        <img src="imgs/Vector.png" alt="Logo" class="h-12 w-auto"> <p class="logoc font-bold text-2xl ">NATURE GREEN NURSERY TCI</p>
     </a>
 
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex space-x-6 text-white font-bold">
             <a href="#" class="hover:text-gray-300">Home</a>
-            <a href="#" class="hover:text-gray-300">landscaping</a>
-            <a href="#" class="hover:text-gray-300">plants</a>
-            <a href="#" class="hover:text-gray-300">Contact</a>
+            <a href="#landscaping" class="hover:text-gray-300">Landscaping</a>
+            <a href="plants.html" class="hover:text-gray-300">Plants</a>
+            <a href="#contact" class="hover:text-gray-300">Contact</a>
         </nav>
         
 
@@ -67,10 +48,10 @@
             </button>
         </div>
         <nav class="flex flex-col space-y-4 px-6">
-            <a href="#" class="hover:text-gray-300">Home</a>
-            <a href="#" class="hover:text-gray-300">Plants</a>
-            <a href="#" class="hover:text-gray-300">Services</a>
-            <a href="#" class="hover:text-gray-300">Contact</a>
+            <a href="home.html" class="hover:text-gray-300">Home</a>
+            <a href="#landscaping" class="hover:text-gray-300">Landscaping</a>
+            <a href="plants.html" class="hover:text-gray-300">Plants</a>
+            <a href="#contact" class="hover:text-gray-300">Contact</a>
         </nav>
     </div>
 
@@ -82,8 +63,8 @@
         <h1 class="text-4xl md:text-6xl font-bold leading-tight">Discover the Beauty of Nature</h1>
         <p class="mt-4 text-lg md:text-xl">Explore our selection of plants and landscaping services to create your perfect garden.</p>
         <div class="mt-6 flex flex-col md:flex-row justify-center gap-4">
-            <a href="#" class="px-6 py-3 bg-green-500 rounded-lg hover:bg-green-600">Explore Our Plants</a>
-            <a href="#" class="px-6 py-3 border border-white rounded-lg hover:bg-white hover:text-black">Learn About Our landscaping Services</a>
+            <a href="#" class="px-6 py-3 button rounded-lg ">Explore Our Plants</a>
+            <a href="#" class="px-6 py-3 bg-gray-200 rounded-lg button1  text-black ">Learn About Our landscaping Services</a>
         </div>
     </div>
 
@@ -94,9 +75,9 @@
 </section>
 
 <section class="bg-cream py-16 px-8">
-    <h2 class="text-green-700 text-3xl md:text-4xl font-bold text-center mb-4">Featured Plants</h2>
+    <h2 class="headtext text-3xl md:text-4xl font-bold text-center mb-4">Featured Plants</h2>
     <div class="w-full flex justify-center mb-6">
-        <div class="w-24 h-1 bg-green-700"></div>
+        <div class="w-24 h-1 line"></div>
     </div>
 
     <div class="relative overflow-hidden w-full space-y-6">
@@ -125,7 +106,7 @@
 
     <!-- See More Button -->
     <div class="flex justify-center mt-6">
-        <button id="seeMoreBtn" class="px-6 py-3 bg-green-700 text-white rounded-lg hover:bg-green-800">See More</button>
+        <button id="seeMoreBtn" class="px-6 py-3 button  rounded-lg ">See More</button>
     </div>
 </section>
 
@@ -137,23 +118,181 @@
     <button id="nextBtn" class="absolute right-5 text-white text-3xl">&gt;</button>
 </div>
 
-<section class="bg-cream py-16 px-8">
+
+<section id="landscaping-section" class="bg-cream py-16 px-8"> 
     <div class="max-w-4xl mx-auto">
-        <h2 class="text-green-700 py-2 text-5xl md:text-5xl font-bold">Landscaping And Garden Maintenance Services</h2>
-        <div class="w-24 h-1 bg-green-700 mt-2 mb-4"></div>
+        <h2 class="headtext py-2 text-5xl md:text-5xl font-bold">Landscaping And Garden Maintenance Services</h2>
+        <div class="w-24 h-1 line mt-2 mb-4"></div>
         <p class="text-gray-700 text-lg">
-            Transform your outdoor space with our expert landscaping services. 
-            From lush gardens to elegant pathways, we bring your vision to life 
-            with sustainable and aesthetic designs tailored to your environment.
+            Welcome to Nature Green Nursery, where we turn your outdoor spaces into stunning havens. Our wide range of landscaping and gardening services is tailored to meet all your gardening needs.
         </p>
+        <p class="text-gray-700 text-lg mt-2">
+            Our expert team specializes in <strong class="headtext">landscaping maintenance</strong> services such as <strong class="headtext">pruning, pest and weed control</strong>, and <strong class="headtext">fertilization</strong>, making sure your plants thrive all year round. 
+        </p>
+        <p class="text-gray-700 text-lg mt-2">
+            Explore our <strong class="headtext">plant nursery and greenhouse</strong> for the finest selection of plants and garden accessories this island has to offer. 
+        </p>
+        <p class="text-gray-700 text-lg mt-2">
+            Enhance your garden's aesthetic with our <strong class="headtext">hardscape</strong> services, including pathways and patios, and keep your outdoor space well-irrigated with our water<strong class="headtext"> irrigation installation</strong> services. We also offer <strong class="headtext">hedges and fence installation </strong> to add both beauty and privacy to your garden.
+        </p>
+        <p class="text-gray-700 text-lg mt-2">
+            Don’t need a huge aesthetic tune-up?<strong class="headtext"> Our potted plants </strong>and selection of <strong class="headtext"> soil, compost, and mulching</strong> materials are just what you need. 
+        </p>
+        <p class="text-gray-700 text-lg mt-2">
+            Interested in one of our services mentioned or one that wasn’t? Make an inquiry below we provide free estimates to help you plan your dream landscape without any surprises. 
+        </p>
+        <p class="text-gray-700 text-3xl font-bold p-3 mt-2">
+        SERVICES WE PROVIDE 
+        </p>
+        <ul class='marker:text-green list-outside list-disc ml-6'>
+            <li>LANSCAPING MAINTENANCE</li>
+            <li>LAWN AND TREE CARE</li>
+            <li>PRUNNING</li>
+            <li>PLANT NURSERY</li>
+            <li>GREEN HOUSE</li>
+            <li>IRRIGATION INSTALLATION</li>
+            <li>HARDSCAPE</li>
+            <li>PEST AND WEED CONTROL</li>
+            <li>FERTILIZATION </li>
+            <li>HEDGES</li>
+            <li>SOIL, COMPOST AND MULCHING</li>
+            <li>POTTED PLANTS </li>
+            <li>FENCE INSTALLATION</li>
+        </ul>
     </div>
 </section>
 
 
+
+<section id="contact"  class=" text-black py-12 flex justify-center items-center">
+    <div class="w-full max-w-lg p-6  rounded-lg">
+        <h2 class="text-2xl font-bold headtext text-center mb-4">
+            Contact US NOW for a free consultation
+        </h2>
+
+        <form id="contactForm">
+            <!-- Name -->
+            <div class="mb-4">
+                <label class="block text-sm font-medium">Name</label>
+                <input type="text" id="name" class="w-full p-3 bg-gray-200 text-black rounded-md mt-1">
+            </div>
+
+            <!-- Number & Service -->
+            <div class="flex space-x-4 mb-4">
+                <div class="w-1/2">
+                    <label class="block text-sm font-medium">Number</label>
+                    <input type="tel" id="number" class="w-full p-3 bg-gray-200 text-black rounded-md mt-1">
+                </div>
+                <div class="w-1/2">
+                    <label class="block text-sm font-medium">Service</label>
+                    <select id="service" class="w-full p-3 bg-gray-200 text-black rounded-md mt-1">
+                        <option value="Landscaping">Landscaping</option>
+                        <option value="Gardening">Gardening</option>
+                        <option value="Maintenance">Maintenance</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Additional Notes -->
+            <div class="mb-4">
+                <label class="block text-sm font-medium">Additional Notes</label>
+                <textarea id="notes" class="w-full p-3 bg-gray-200 text-black rounded-md mt-1" rows="4"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="w-full p-3  button text-white font-bold rounded-md ">
+                Make an Inquiry
+            </button>
+        </form>
+    </div>
+</section>
+
     
 
+<section class=" text-black py-12 px-6 md:px-16">
+    <div class="max-w-4xl mx-auto">
+        <!-- ABOUT US -->
+        <div>
+            <h2 class="text-2xl font-bold headtext">ABOUT US</h2>
+            <div class="w-16 h-1 line mt-1"></div> 
+        </div>
+        <p class="text-xl text-black mt-4">
+            We are a trusted and experienced business, providing quality service in the Turks and Caicos Islands for over 20 years.  We specialize in providing on time services, in a warm and friendly atmosphere. We work closely with our clients to understand their needs, working with your budget, to bring out the best services to our clients.
 
-    
+        </p>
+
+        <p class="text-xl text-black mt-2">
+            Our large tropical Plant selections, adapt well to our local environment, creating a beautiful finish product, and adding to the success of every landscaping project.  
+        </p>
+
+        <p class="text-xl text-black mt-2">
+            Whether you are looking to improve your residential or commercial property, we are here for you to guide you every step of the way, ensuring the best Landscape experience.
+        </p>
+        <p class="text-xl text-black mt-2">
+            Contact us for a free quotation.
+        </p>
+        
+        <!-- LOCATION & HOURS (Centered) -->
+        <div class="text-center mt-8">
+            <h2 class="text-2xl font-bold headtext">Location & Hours</h2>
+            <p class="text-xl font-semibold text-black">Located on the beautiful Cork Tree Beach Strip</p>
+
+            <div class="mt-2 text-1xl text-black">
+                <p>Godet’s Allotment, Cork Tree Beach</p>
+                <p>Grand Turk TKCA 1ZZ</p>
+                <p>Turks & Caicos Islands</p>
+            </div>
+
+            <div class="mt-4 text-lg text-black">
+                <p><span class="font-semibold text-1xl">Mon - Fri:</span> 7:00am - 5:00pm</p>
+                <p><span class="font-semibold text-1xl">Sat:</span> 7:00am - 4:00pm</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<footer class="bg-[#D1A700] text-black py-6 px-4 md:px-16">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+        <!-- Left Section: Company Info -->
+        <div class="mb-6 md:mb-0">
+            <h2 class="font-bold text-lg">Nature Green Nursery TCI</h2>
+            <p class="text-sm">Godet’s Allotment</p>
+            <p class="text-sm">Cork Tree Beach</p>
+            <p class="text-sm">Grand Turk, Turks & Caicos Islands</p>
+        </div>
+
+        <!-- Middle Section: Logo -->
+        <div class="mb-6 md:mb-0">
+            <img src="imgs/Vector.png" alt="Palm Tree Logo" class="h-16 mx-auto">
+        </div>
+
+        <!-- Right Section: Hours -->
+        <div>
+            <h2 class="font-bold text-lg">Hours</h2>
+            <p class="text-md">Mon-Sat, 7:00am - 4:30pm</p>
+            <p class="text-md">Phone: (649) 243-1801</p>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left mt-6">
+        <!-- Social Media -->
+       
+        
+
+        <!-- Contact Info -->
+        <div class="mt-4 md:mt-0">
+            <h2 class="font-bold text-lg">Contact Us</h2>
+            <p class="text-md">conybaron@yahoo.com</p>
+            <p class="text-md">naturegreennursery@gmail.com</p>
+        </div>
+    </div>
+</footer>
+
+
     <script src="home.js"></script>
 </body>
 </html>
