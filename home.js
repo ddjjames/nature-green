@@ -17,68 +17,98 @@ closeBtn.addEventListener('click', () => {
 
 
 
-//infinity loops scrooling for the left and right imgs
-document.addEventListener("DOMContentLoaded", function () {
-    // Infinite Scroll Duplication
-    const sliderLeft = document.getElementById("slider-left");
-    const sliderRight = document.getElementById("slider-right");
-    sliderLeft.innerHTML += sliderLeft.innerHTML;
-    sliderRight.innerHTML += sliderRight.innerHTML;
 
-    // Gallery Modal Logic
+
+document.addEventListener("DOMContentLoaded", function () {
     const images = document.querySelectorAll(".gallery-img");
     const galleryModal = document.getElementById("galleryModal");
     const galleryImage = document.getElementById("galleryImage");
+    const imageLabel = document.getElementById("imageLabel");
     const closeModal = document.getElementById("closeModal");
     const prevBtn = document.getElementById("prevBtn");
     const nextBtn = document.getElementById("nextBtn");
     const seeMoreBtn = document.getElementById("seeMoreBtn");
 
     let currentImageIndex = 0;
-    let imageSources = Array.from(images).map(img => img.src);
+    const imageSources = Array.from(images).map(img => img.src);
+    const imageLabels = ["Plant 1", "Plant 2", "Plant 3", "Plant 4", "Plant 5", "Plant 6", "Plant 7", "Plant 8", "Plant 9", "Plant 10"];
 
     function showImage(index) {
         if (index < 0) index = imageSources.length - 1;
         if (index >= imageSources.length) index = 0;
         currentImageIndex = index;
         galleryImage.src = imageSources[currentImageIndex];
+        imageLabel.textContent = imageLabels[currentImageIndex];
     }
 
-    // Open Modal on "See More" Click
+    // Restore Infinite Scroll Duplication
+    const sliderLeft = document.getElementById("slider-left");
+    const sliderRight = document.getElementById("slider-right");
+    
+    // Ensure the slider content is duplicated for smooth scrolling
+    sliderLeft.innerHTML += sliderLeft.innerHTML;
+    sliderRight.innerHTML += sliderRight.innerHTML;
+
+    let isTransitioning = false;
+
+    function moveSlider(slider, direction) {
+        if (isTransitioning) return;
+        isTransitioning = true;
+
+        // Apply the transition effect
+        slider.style.transition = 'transform 1s ease-in-out';
+        let currentTransform = parseFloat(getComputedStyle(slider).transform.split(',')[4]) || 0;
+        slider.style.transform = `translateX(${currentTransform + direction}px)`;
+
+        // After the transition is complete, reset the position for smooth restart
+        setTimeout(() => {
+            if (currentTransform < -slider.offsetWidth) {
+                slider.style.transition = 'none';  // Disable transition for instant reset
+                slider.style.transform = `translateX(0)`;  // Reset to start
+                setTimeout(() => {
+                    slider.style.transition = 'transform 1s ease-in-out';  // Re-enable transition
+                }, 50); // Small delay before allowing transition again
+            }
+            isTransitioning = false;
+        }, 1000);  // Match the transition duration
+    }
+
+    // Button clicks to see more or move between images
     seeMoreBtn.addEventListener("click", function () {
         galleryModal.classList.remove("hidden");
-        showImage(0); // Show first image initially
+        showImage(0);
     });
 
-    // Close Modal
     closeModal.addEventListener("click", function () {
         galleryModal.classList.add("hidden");
     });
 
-    // Navigate Left
     prevBtn.addEventListener("click", function () {
         showImage(currentImageIndex - 1);
     });
 
-    // Navigate Right
     nextBtn.addEventListener("click", function () {
         showImage(currentImageIndex + 1);
     });
 
-    // Close modal on outside click
-    galleryModal.addEventListener("click", function (event) {
-        if (event.target === galleryModal) {
-            galleryModal.classList.add("hidden");
-        }
-    });
-
-    // Close on Escape Key
     document.addEventListener("keydown", function (event) {
         if (event.key === "Escape") {
             galleryModal.classList.add("hidden");
         }
     });
+
+    // Start automatic scrolling
+    setInterval(() => {
+        moveSlider(sliderLeft, -300); // Move left slider to the left
+        moveSlider(sliderRight, -300); // Move right slider to the left
+    }, 3000);  // Change image every 3 seconds
 });
+
+
+
+
+
+
 
 
 
@@ -109,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
+//js to scrool down when click on the landscaping link
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("a[href='#landscaping']").forEach(anchor => {
         anchor.addEventListener("click", function (e) {
@@ -124,12 +154,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
+//js to scrool down when click on the contact link
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("a[href='#contact']").forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
             document.querySelector("#contact").scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+});
+
+
+
+
+//js to scrool down when click on the plant link
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("a[href='#plants']").forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector("#plants").scrollIntoView({
                 behavior: "smooth"
             });
         });
@@ -176,52 +221,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+///JS FOR BUTTON SCROOLING ALL THE WAY UP
 
+document.addEventListener("DOMContentLoaded", function () {
+    const backToTopButton = document.getElementById("backToTop");
 
+    window.addEventListener("scroll", function () {
+        const scrollHeight = document.documentElement.scrollHeight;
+        const scrollPosition = window.innerHeight + window.scrollY;
 
-
-//script for the plant page animation to change image every 5s 
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    let images = document.querySelectorAll(".slideshow img");
-    let index = 0;
-
-    function changeImage() {
-        images[index].classList.remove("active");
-        index = (index + 1) % images.length;
-        images[index].classList.add("active");
-    }
-
-    setInterval(changeImage, 3000); // Change image every 3 seconds
-});
-
-
-
-
-
-
-
-//js  for the imgs effects
-const images = document.querySelectorAll(".img");
-const firstImage = document.getElementById("img1");
-
-images.forEach(img => {
-    img.addEventListener("mouseenter", () => {
-        images.forEach(otherImg => {
-            if (otherImg !== img) {
-                otherImg.classList.add("collapsed");
-                otherImg.classList.remove("expanded");
-            }
-        });
-        img.classList.add("expanded");
-        img.classList.remove("collapsed");
+        // Show button when user reaches the bottom
+        if (scrollPosition >= scrollHeight - 50) {
+            backToTopButton.classList.remove("hidden");
+        } else {
+            backToTopButton.classList.add("hidden");
+        }
     });
-});
 
-document.querySelector(".image-container").addEventListener("mouseleave", () => {
-    images.forEach(img => {
-        img.classList.remove("expanded", "collapsed");
+    // Scroll to top when button is clicked
+    backToTopButton.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
     });
-    firstImage.classList.add("expanded");
 });

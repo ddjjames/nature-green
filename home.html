@@ -12,32 +12,45 @@
 
 
 
-<body class="bg-gray-100">
-    <!-- Header -->
-    <header class="absolute top-0 left-0 w-full flex justify-between items-center px-8 py-6 bg-transparent z-20">
-       <!-- Logo -->
-       <a href="#" class="flex items-center">
-        <img src="imgs/Vector.png" alt="Logo" class="h-12 w-auto"> <p class="logoc font-bold text-2xl ">NATURE GREEN NURSERY TCI</p>
-    </a>
+<body class="">
+   <!-- Header --> 
+<header class="absolute top-0 left-0 w-full flex justify-between items-center px-8 py-6 bg-transparent z-20">
+<!-- Logo -->
+<div class="flex items-center w-full">
+    <img src="imgs/Vector.png" alt="Logo" class="h-12 w-auto"> 
+    <div class="flex-grow text-left">
+        <p class="logoc text-5xl font-bold text-center" style="font-family: 'YourHandwritingFont', sans-serif;">NATURE GREEN NURSERY TCI</p>
+    </div>
+</div>
 
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex space-x-6 text-white font-bold">
-            <a href="#" class="hover:text-gray-300">Home</a>
-            <a href="#landscaping" class="hover:text-gray-300">Landscaping</a>
-            <a href="plants.html" class="hover:text-gray-300">Plants</a>
-            <a href="#contact" class="hover:text-gray-300">Contact</a>
-        </nav>
-        
 
-        <!-- Mobile Menu Button -->
-        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
-            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-        </button>
-    </header>
 
-    <!-- Sidebar Navigation (Fixed Right Side) -->
+
+
+ 
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-6 text-white font-bold">
+      
+        <a href="#plants" class="relative group">Plants
+            <span class="block h-0.5 bg-white scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+        </a>
+        <a href="#landscaping" class="relative group">Landscaping
+            <span class="block h-0.5 bg-white scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+        </a>
+        <a href="#contact" class="relative group">Contact
+            <span class="block h-0.5 bg-white scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+        </a>
+    </nav>
+     
+     <!-- Mobile Menu Button -->
+     <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+         <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+         </svg>
+     </button>
+ </header>
+ 
+    <!-- Sidebar Nav]igation (Fixed Right Side) -->
     <div id="sidebar" class="fixed top-0 right-0 w-64 h-full bg-gray-900 text-white transform translate-x-full transition-transform duration-300 ease-in-out z-50 shadow-lg">
         <div class="flex justify-between items-center p-6">
             <span class="text-2xl font-bold">Menu</span>
@@ -48,23 +61,22 @@
             </button>
         </div>
         <nav class="flex flex-col space-y-4 px-6">
-            <a href="home.html" class="hover:text-gray-300">Home</a>
             <a href="#landscaping" class="hover:text-gray-300">Landscaping</a>
-            <a href="plants.html" class="hover:text-gray-300">Plants</a>
+            <a href="#plants" class="hover:text-gray-300">Plants</a>
             <a href="#contact" class="hover:text-gray-300">Contact</a>
         </nav>
     </div>
 
     
     <!-- Hero Section -->
-<section class="relative h-screen flex items-center justify-center text-center text-white bg-cover bg-center" style="background-image: url('imgs/hero\ image.jpg');">
+<section class="relative h-screen flex items-center justify-center text-center text-white bg-cover bg-center" style="background-image: url('imgs/hero\ image.jpg'); ">
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
     <div class="relative z-10 max-w-3xl px-4">
-        <h1 class="text-4xl md:text-6xl font-bold leading-tight">Discover the Beauty of Nature</h1>
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight"       style="font-family: 'YourTangerineFont', sans-serif;"  >Discover the Beauty of Nature</h1>
         <p class="mt-4 text-lg md:text-xl">Explore our selection of plants and landscaping services to create your perfect garden.</p>
         <div class="mt-6 flex flex-col md:flex-row justify-center gap-4">
-            <a href="#" class="px-6 py-3 button rounded-lg ">Explore Our Plants</a>
-            <a href="#" class="px-6 py-3 bg-gray-200 rounded-lg button1  text-black ">Learn About Our landscaping Services</a>
+            <a href="#plants" class="px-6 py-3 button rounded-lg ">Explore Our Plants</a>
+            <a href="#landscaping" class="px-6 py-3 bg-gray-200 rounded-lg button1  text-black ">Learn About Our landscaping Services</a>
         </div>
     </div>
 
@@ -74,8 +86,9 @@
 
 </section>
 
-<section class="bg-cream py-16 px-8">
-    <h2 class="headtext text-3xl md:text-4xl font-bold text-center mb-4">Featured Plants</h2>
+
+<section id="plants"  class=" py-16 px-8">
+    <h2 class="headtext text-6xl md:text-6xl font-bold text-center mb-4" style="font-family: 'YourTangerineFont', sans-serif;">Featured Plants</h2>
     <div class="w-full flex justify-center mb-6">
         <div class="w-24 h-1 line"></div>
     </div>
@@ -87,19 +100,27 @@
                 <img src="imgs/plant 1.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
                 <img src="imgs/plant 2.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
                 <img src="imgs/plant 3.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
-                <img src="imgs/plant 4.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
+                <img src="imgs/plant 4.png" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
                 <img src="imgs/plant 5.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
+                <img src="imgs/plant 6.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
+                <img src="imgs/plant 7.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
+                <img src="imgs/plant 8.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
             </div>
         </div>
 
         <!-- Second slider (right direction) -->
         <div class="relative overflow-hidden w-full">
             <div class="flex space-x-4 animate-slide-right" id="slider-right">
-                <img src="imgs/plant 6.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
-                <img src="imgs/plant 7.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
-                <img src="imgs/plant 8.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
+                
+               
                 <img src="imgs/plant 9.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
                 <img src="imgs/plant 10.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
+                <img src="imgs/plant 12.png" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
+                <img src="imgs/plant 13.png" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
+                <img src="imgs/plant 14.png" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
+                <img src="imgs/plant 15.png" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
+                <img src="imgs/plant 16.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
+                <img src="imgs/plant 16.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
             </div>
         </div>
     </div>
@@ -114,14 +135,19 @@
 <div id="galleryModal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex justify-center items-center hidden">
     <button id="closeModal" class="absolute top-5 right-5 text-white text-2xl">&times;</button>
     <button id="prevBtn" class="absolute left-5 text-white text-3xl">&lt;</button>
-    <img id="galleryImage" class="w-[500px] h-[500px] object-cover rounded-lg shadow-lg">
+    <div class="relative mt-10"> <!-- Moved down by adding margin-top -->
+        <div class="absolute top-[-40px] left-0 w-full flex justify-center"> <!-- Positioning text above the image -->
+            <span id="imageLabel" class="text-white text-xl font-bold"></span>
+        </div>
+        <img id="galleryImage" class="w-[500px] h-[500px] object-cover rounded-lg shadow-lg">
+    </div>
     <button id="nextBtn" class="absolute right-5 text-white text-3xl">&gt;</button>
 </div>
 
 
-<section id="landscaping-section" class="bg-cream py-16 px-8"> 
+<section id="landscaping-section" class=" py-16 px-8"> 
     <div class="max-w-4xl mx-auto">
-        <h2 class="headtext py-2 text-5xl md:text-5xl font-bold">Landscaping And Garden Maintenance Services</h2>
+        <h2 class="headtext py-2 text-6xl md:text-6xl font-bold" style="font-family: 'YourTangerineFont', sans-serif;">Landscaping And Garden Maintenance Services</h2>
         <div class="w-24 h-1 line mt-2 mb-4"></div>
         <p class="text-gray-700 text-lg">
             Welcome to Nature Green Nursery, where we turn your outdoor spaces into stunning havens. Our wide range of landscaping and gardening services is tailored to meet all your gardening needs.
@@ -166,7 +192,7 @@
 
 <section id="contact"  class=" text-black py-12 flex justify-center items-center">
     <div class="w-full max-w-lg p-6  rounded-lg">
-        <h2 class="text-2xl font-bold headtext text-center mb-4">
+        <h2 class="text-4xl font-bold headtext text-center mb-4" style="font-family: 'YourTangerineFont', sans-serif;">
             Contact US NOW for a free consultation
         </h2>
 
@@ -175,6 +201,11 @@
             <div class="mb-4">
                 <label class="block text-sm font-medium">Name</label>
                 <input type="text" id="name" class="w-full p-3 bg-gray-200 text-black rounded-md mt-1">
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-sm font-medium">Email</label>
+                <input type="email" id="name" class="w-full p-3 bg-gray-200 text-black rounded-md mt-1">
             </div>
 
             <!-- Number & Service -->
@@ -213,7 +244,7 @@
     <div class="max-w-4xl mx-auto">
         <!-- ABOUT US -->
         <div>
-            <h2 class="text-2xl font-bold headtext">ABOUT US</h2>
+            <h2 class="text-4xl font-bold headtext" style="font-family: 'YourTangerineFont', sans-serif;">ABOUT US</h2>
             <div class="w-16 h-1 line mt-1"></div> 
         </div>
         <p class="text-xl text-black mt-4">
@@ -234,7 +265,7 @@
         
         <!-- LOCATION & HOURS (Centered) -->
         <div class="text-center mt-8">
-            <h2 class="text-2xl font-bold headtext">Location & Hours</h2>
+            <h2 class="text-5xl font-bold headtext" style="font-family: 'YourTangerineFont', sans-serif;">Location & Hours</h2>
             <p class="text-xl font-semibold text-black">Located on the beautiful Cork Tree Beach Strip</p>
 
             <div class="mt-2 text-1xl text-black">
@@ -255,7 +286,7 @@
 
 
 
-<footer class="bg-[#D1A700] text-black py-6 px-4 md:px-16">
+<footer class="  py-6 px-4 md:px-16 footer">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
         <!-- Left Section: Company Info -->
         <div class="mb-6 md:mb-0">
@@ -271,28 +302,66 @@
         </div>
 
         <!-- Right Section: Hours -->
-        <div>
-            <h2 class="font-bold text-lg">Hours</h2>
-            <p class="text-md">Mon-Sat, 7:00am - 4:30pm</p>
+        <div class="mr-10">
+            <!-- Contact Info -->
+        <div class="mt-4 mr-6 md:mt-0">
+            <h2 class="font-bold text-lg">Contact Us</h2>
+            <p class="text-md">conybaron@yahoo.com</p>
+            <p class="text-md">naturegreennursery@gmail.com</p>
             <p class="text-md">Phone: (649) 243-1801</p>
         </div>
+            
+        </div>
     </div>
-
+  <!-- Social Media 
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left mt-6">
-        <!-- Social Media -->
+    
        
         
 
-        <!-- Contact Info -->
         <div class="mt-4 md:mt-0">
             <h2 class="font-bold text-lg">Contact Us</h2>
             <p class="text-md">conybaron@yahoo.com</p>
             <p class="text-md">naturegreennursery@gmail.com</p>
+            <p class="text-md">Phone: (649) 243-1801</p>
         </div>
     </div>
+-->
 </footer>
 
+<!-- Back to Top Button -->
+<button id="backToTop" class="fixed bottom-12 right-3 bg-green-600 text-white px-4 py-3 rounded-full shadow-lg hidden">
+  GO UP ⬆ 
+</button>
 
     <script src="home.js"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const backToTopButton = document.getElementById("backToTop");
+        
+            window.addEventListener("scroll", function () {
+                const scrollHeight = document.documentElement.scrollHeight;
+                const scrollPosition = window.innerHeight + window.scrollY;
+        
+                // Show button when user reaches the bottom
+                if (scrollPosition >= scrollHeight - 50) {
+                    backToTopButton.classList.remove("hidden");
+                } else {
+                    backToTopButton.classList.add("hidden");
+                }
+            });
+        
+            // Scroll to top when button is clicked
+            backToTopButton.addEventListener("click", function () {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        });
+        </script>
+        
+
+
+
 </body>
 </html>

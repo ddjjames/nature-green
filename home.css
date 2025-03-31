@@ -1,6 +1,45 @@
+#backToTop {
+    transition: opacity 0.3s ease-in-out;
+}
+
+#backToTop:hover {
+    background-color: #4CAF50;
+}
+
+
+
+
+
+
 .body{
     background-color: #FBEEDC;
 }
+
+
+
+@font-face {
+    font-family: 'YourHandwritingFont';
+    src: url('fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf') format('truetype');
+}
+
+
+
+@font-face {
+    font-family: 'YourTangerineFont';
+    src: url('fonts/Tangerine/Tangerine-Bold.ttf') format('truetype');
+}
+
+
+/* Ensure that the slider has a smooth transition */
+#slider-left, #slider-right {
+    transition: transform 1s ease-in-out;  /* Smooth transition */
+}
+
+.gallery-img {
+    transition: transform 1s ease-in-out; /* Smooth transition for individual images */
+}
+
+
 
 .logoc{
     color:rgb(255, 255, 255);
@@ -11,6 +50,13 @@
 .line{
     background-color: #031602;
 }
+
+
+.footer{
+    background-color: #031602;
+    color: white;
+}
+
 
 
 .button{
