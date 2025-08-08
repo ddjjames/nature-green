@@ -5,13 +5,14 @@ const menuBtn = document.getElementById('menu-btn');
 const closeBtn = document.getElementById('close-btn');
 const sidebar = document.getElementById('sidebar');
 
-menuBtn.addEventListener('click', () => {
-    sidebar.classList.remove('translate-x-full');
-});
 
-closeBtn.addEventListener('click', () => {
-    sidebar.classList.add('translate-x-full');
-});
+ menuBtn.addEventListener('click', () => {
+     sidebar.classList.remove('translate-x-full');
+ });
+
+ closeBtn.addEventListener('click', () => {
+     sidebar.classList.add('translate-x-full');
+ });
 
 
 
@@ -101,11 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(() => {
         moveSlider(sliderLeft, -300); // Move left slider to the left
         moveSlider(sliderRight, -300); // Move right slider to the left
-    }, 3000);  // Change image every 3 seconds
+    }, 1000);  // Change image every 3 seconds
 });
-
-
-
 
 
 
@@ -114,26 +112,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //pause the slide when the mouse point on a slider left or right 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const sliderLeft = document.getElementById("slider-left");
-    const sliderRight = document.getElementById("slider-right");
+ document.addEventListener("DOMContentLoaded", function () {
+     const sliderLeft = document.getElementById("slider-left");
+     const sliderRight = document.getElementById("slider-right");
 
-    function pauseAnimation(element) {
-        element.style.animationPlayState = "paused";
-    }
+     function pauseAnimation(element) {
+         element.style.animationPlayState = "paused";
+     }
 
-    function resumeAnimation(element) {
-        element.style.animationPlayState = "running";
-    }
+     function resumeAnimation(element) {
+         element.style.animationPlayState = "running";
+     }
 
-    // Pause slider when hovering
-    sliderLeft.addEventListener("mouseenter", () => pauseAnimation(sliderLeft));
-    sliderRight.addEventListener("mouseenter", () => pauseAnimation(sliderRight));
+     // Pause slider when hovering
+     sliderLeft.addEventListener("mouseenter", () => pauseAnimation(sliderLeft));
+     sliderRight.addEventListener("mouseenter", () => pauseAnimation(sliderRight));
 
-    // Resume slider when mouse leaves
-    sliderLeft.addEventListener("mouseleave", () => resumeAnimation(sliderLeft));
-    sliderRight.addEventListener("mouseleave", () => resumeAnimation(sliderRight));
-});
+     // Resume slider when mouse leaves
+     sliderLeft.addEventListener("mouseleave", () => resumeAnimation(sliderLeft));
+     sliderRight.addEventListener("mouseleave", () => resumeAnimation(sliderRight));
+ });
 
 
 

@@ -33,6 +33,7 @@
 /* Ensure that the slider has a smooth transition */
 #slider-left, #slider-right {
     transition: transform 1s ease-in-out;  /* Smooth transition */
+    will-change: transform;
 }
 
 .gallery-img {
@@ -89,8 +90,6 @@
 
 
 
-
-
 /* Image Fade Animation  for plants page*/ 
 .slideshow img {
     position: absolute;
@@ -110,11 +109,12 @@
 
 @keyframes slide-left {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+    100% {transform: translateX(calc(-50% - 0.5rem));}
 }
 
+
 @keyframes slide-right {
-    0% { transform: translateX(-100%); }
+    0% { transform: translateX(-50%); }
     100% { transform: translateX(0); }
 }
 
@@ -128,7 +128,14 @@
     animation: slide-right 10s linear infinite;
 }
 
+.slider{
+    mask: linear-gradient(90deg, transparent, white 7%, white 93%, transparent);
+}
 
+.slider-content
+{
+    width: max-content;
+}
 
 
 

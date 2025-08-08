@@ -6,7 +6,9 @@
     <title>NATURE GREEN NURSERY TCI</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
     <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
 </head>
 
@@ -72,6 +74,7 @@
 <section class="relative h-screen flex items-center justify-center text-center text-white bg-cover bg-center" style="background-image: url('imgs/hero\ image.jpg'); ">
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
     <div class="relative z-10 max-w-3xl px-4">
+        <h1 class="text-4xl md:text-6xl mb-6 font-bold leading-tight"       style="font-family: 'Great Vibes', sans-serif;"  >Welcome</h1>
         <h1 class="text-4xl md:text-6xl font-bold leading-tight"       style="font-family: 'YourTangerineFont', sans-serif;"  >Discover the Beauty of Nature</h1>
         <p class="mt-4 text-lg md:text-xl">Explore our selection of plants and landscaping services to create your perfect garden.</p>
         <div class="mt-6 flex flex-col md:flex-row justify-center gap-4">
@@ -95,8 +98,8 @@
 
     <div class="relative overflow-hidden w-full space-y-6">
         <!-- First slider (left direction) -->
-        <div class="relative overflow-hidden w-full">
-            <div class="flex space-x-4 animate-slide-left" id="slider-left">
+        <div class="relative overflow-hidden w-full slider">                                                               
+            <div class="flex space-x-4 animate-slide-left slider-content" id="slider-left">
                 <img src="imgs/plant 1.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
                 <img src="imgs/plant 2.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
                 <img src="imgs/plant 3.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
@@ -109,8 +112,8 @@
         </div>
 
         <!-- Second slider (right direction) -->
-        <div class="relative overflow-hidden w-full">
-            <div class="flex space-x-4 animate-slide-right" id="slider-right">
+        <div class="relative overflow-hidden w-full slider">
+            <div class="flex space-x-4 animate-slide-right slider-content" id="slider-right">
                 
                
                 <img src="imgs/plant 9.jpg" class="gallery-img w-60 h-60 object-cover rounded-lg shadow-md">
@@ -131,6 +134,7 @@
     </div>
 </section>
 
+
 <!-- MODAL (Gallery) -->
 <div id="galleryModal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex justify-center items-center hidden">
     <button id="closeModal" class="absolute top-5 right-5 text-white text-2xl">&times;</button>
@@ -150,7 +154,7 @@
         <h2 class="headtext py-2 text-6xl md:text-6xl font-bold" style="font-family: 'YourTangerineFont', sans-serif;">Landscaping And Garden Maintenance Services</h2>
         <div class="w-24 h-1 line mt-2 mb-4"></div>
         <p class="text-gray-700 text-lg">
-            Welcome to Nature Green Nursery, where we turn your outdoor spaces into stunning havens. Our wide range of landscaping and gardening services is tailored to meet all your gardening needs.
+            Welcome to Nature Green Nursery TCI, where we turn your outdoor spaces into stunning havens. Our wide range of landscaping and gardening services is tailored to meet all your gardening needs.
         </p>
         <p class="text-gray-700 text-lg mt-2">
             Our expert team specializes in <strong class="headtext">landscaping maintenance</strong> services such as <strong class="headtext">pruning, pest and weed control</strong>, and <strong class="headtext">fertilization</strong>, making sure your plants thrive all year round. 
@@ -196,30 +200,42 @@
             Contact US NOW for a free consultation
         </h2>
 
-        <form id="contactForm">
+        <form action="https://api.web3forms.com/submit" method="POST">
             <!-- Name -->
             <div class="mb-4">
                 <label class="block text-sm font-medium">Name</label>
-                <input type="text" id="name" class="w-full p-3 bg-gray-200 text-black rounded-md mt-1">
+                <input type="text" name="name" id="name" class="w-full p-3 bg-gray-200 text-black rounded-md mt-1" required>
+
+                <!-- Email Access Key  -->
+                <input type="hidden" name="access_key" value="b7166789-6bb0-4df5-a195-ba4dbeb8b293">
+
+                <!-- Name and Subject settings for Email -->
+                <input type="hidden" name="subject" value="Inquiry From Nature Green Nursery">
+                <input type="hidden" name="from_name" value=" Nature Green Nursery TCI">
+                
+                <!-- Honeypot Protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
             </div>
 
             <div class="mb-4">
                 <label class="block text-sm font-medium">Email</label>
-                <input type="email" id="name" class="w-full p-3 bg-gray-200 text-black rounded-md mt-1">
+                <input type="email" name="email" id="name" class="w-full p-3 bg-gray-200 text-black rounded-md mt-1" required>
             </div>
 
             <!-- Number & Service -->
             <div class="flex space-x-4 mb-4">
                 <div class="w-1/2">
                     <label class="block text-sm font-medium">Number</label>
-                    <input type="tel" id="number" class="w-full p-3 bg-gray-200 text-black rounded-md mt-1">
+                    <input type="tel" name="number" id="number" class="w-full p-3 bg-gray-200 text-black rounded-md mt-1">
                 </div>
                 <div class="w-1/2">
-                    <label class="block text-sm font-medium">Service</label>
-                    <select id="service" class="w-full p-3 bg-gray-200 text-black rounded-md mt-1">
+                    <label class="block text-sm font-medium">Service Type</label>
+                    <select name="service" id="service" class="w-full p-3 bg-gray-200 text-black rounded-md mt-1">
                         <option value="Landscaping">Landscaping</option>
                         <option value="Gardening">Gardening</option>
                         <option value="Maintenance">Maintenance</option>
+                        <option value="Maintenance">Other</option>
                     </select>
                 </div>
             </div>
@@ -227,7 +243,7 @@
             <!-- Additional Notes -->
             <div class="mb-4">
                 <label class="block text-sm font-medium">Additional Notes</label>
-                <textarea id="notes" class="w-full p-3 bg-gray-200 text-black rounded-md mt-1" rows="4"></textarea>
+                <textarea name="notes" id="notes" class="w-full p-3 bg-gray-200 text-black rounded-md mt-1" rows="4"></textarea>
             </div>
 
             <!-- Submit Button -->
@@ -268,7 +284,7 @@
             <h2 class="text-5xl font-bold headtext" style="font-family: 'YourTangerineFont', sans-serif;">Location & Hours</h2>
             <p class="text-xl font-semibold text-black">Located on the beautiful Cork Tree Beach Strip</p>
 
-            <div class="mt-2 text-1xl text-black">
+            <div class="mt-2 text-xl text-black">
                 <p>Godet’s Allotment, Cork Tree Beach</p>
                 <p>Grand Turk TKCA 1ZZ</p>
                 <p>Turks & Caicos Islands</p>
@@ -299,15 +315,16 @@
         <!-- Middle Section: Logo -->
         <div class="mb-6 md:mb-0">
             <img src="imgs/Vector.png" alt="Palm Tree Logo" class="h-16 mx-auto">
+            <p class="text-sm">© Copyright 2025 Nature Green Nursery TCI</p>
         </div>
 
         <!-- Right Section: Hours -->
-        <div class="mr-10">
+        <div class="mr-8">
             <!-- Contact Info -->
         <div class="mt-4 mr-6 md:mt-0">
             <h2 class="font-bold text-lg">Contact Us</h2>
+            <p class="text-md">naturegreennurserytci@gmail.com</p>
             <p class="text-md">conybaron@yahoo.com</p>
-            <p class="text-md">naturegreennursery@gmail.com</p>
             <p class="text-md">Phone: (649) 243-1801</p>
         </div>
             
@@ -334,7 +351,8 @@
   GO UP ⬆ 
 </button>
 
-    <script src="home.js"></script>
+<script src="scroll.js"></script>
+<script src="home.js"></script>
 
 
     <script>
