@@ -6,11 +6,6 @@
     background-color: #4CAF50;
 }
 
-
-
-
-
-
 .body{
     background-color: #FBEEDC;
 }
@@ -29,14 +24,9 @@
     src: url('fonts/Tangerine/Tangerine-Bold.ttf') format('truetype');
 }
 
-
-
-
 .gallery-img {
     transition: transform 1s ease-in-out; /* Smooth transition for individual images */
 }
-
-
 
 .logoc{
     color:rgb(255, 255, 255);
@@ -54,8 +44,6 @@
     color: white;
 }
 
-
-
 .button{
     background-color: #031602;
     color: #c3c4c4;
@@ -65,8 +53,6 @@
     background-color: #c3c4c4;
     color:#031602 ;
 }
-
-
 
 .button1{
     background-color:#c3c4c4;
@@ -82,10 +68,6 @@
     color: #86AF58;
 }
 
-
-
-
-
 /* Image Fade Animation  for plants page*/ 
 .slideshow img {
     position: absolute;
@@ -96,10 +78,6 @@
     opacity: 1;
     
 }
-
-
-
-
 
 /* style for the infinity scrolling*/
 
@@ -132,11 +110,6 @@
 {
     width: max-content;
 }
-
-
-
-
-
 
 
 /* style for the plant section img sliding*/
@@ -186,3 +159,4 @@
         width: 5rem; /* Keep collapsed effect reasonable */
     }
 }
+
