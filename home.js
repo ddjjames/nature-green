@@ -32,7 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let currentImageIndex = 0;
     const imageSources = Array.from(images).map(img => img.src);
-    const imageLabels = ["Plant 1", "Plant 2", "Plant 3", "Plant 4", "Plant 5", "Plant 6", "Plant 7", "Plant 8", "Plant 9", "Plant 10"];
+    const imageLabels = ["Banana", "Banana", "Banana", "Croton", "Mulderberry", "Cacti", "Cacti", "Cacti", "Bridal Bouquet", "Pothos Plant", "Agave", "ZZ Plant", "Coconut",
+    "Potted Plants", "Potted Plants", "Breadfruit", "Breadfruit", "Croton", "Croton", "Bougainvillea", "Bougainvillea", "Bougainvillea", "Bougainvillea", "Bougainvillea", "Palm", "Christmas Palm"
+    ,"Fan Palm", "Areca Palm","Potted Bougainvillea", "Cherry Lime" ];
 
     function showImage(index) {
         if (index < 0) index = imageSources.length - 1;
@@ -100,8 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Start automatic scrolling
     setInterval(() => {
-        moveSlider(sliderLeft, -300); // Move left slider to the left
-        moveSlider(sliderRight, -300); // Move right slider to the left
+        //moveSlider(sliderLeft, -300); // Move left slider to the left
+        //moveSlider(sliderRight, -300); // Move right slider to the left
     }, 1000);  // Change image every 3 seconds
 });
 

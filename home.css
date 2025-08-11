@@ -30,11 +30,7 @@
 }
 
 
-/* Ensure that the slider has a smooth transition */
-#slider-left, #slider-right {
-    transition: transform 1s ease-in-out;  /* Smooth transition */
-    will-change: transform;
-}
+
 
 .gallery-img {
     transition: transform 1s ease-in-out; /* Smooth transition for individual images */
@@ -120,12 +116,12 @@
 
 .animate-slide-left {
     display: flex;
-    animation: slide-left 10s linear infinite;
+    animation: slide-left 35s linear infinite;
 }
 
 .animate-slide-right {
     display: flex;
-    animation: slide-right 10s linear infinite;
+    animation: slide-right 35s linear infinite;
 }
 
 .slider{
