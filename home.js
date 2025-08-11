@@ -17,9 +17,6 @@ const sidebar = document.getElementById('sidebar');
 
 
 
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
     const images = document.querySelectorAll(".gallery-img");
     const galleryModal = document.getElementById("galleryModal");
@@ -185,9 +182,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
-
 //js for holding email data
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -219,8 +213,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
 ///JS FOR BUTTON SCROOLING ALL THE WAY UP
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -242,4 +234,5 @@ document.addEventListener("DOMContentLoaded", function () {
     backToTopButton.addEventListener("click", function () {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
+
 });
